@@ -1,0 +1,22 @@
+
+async function getUserData() {
+    let userName = "CMayo64"
+    let searchName = document.querySelector('#name').value
+    if(searchName) {
+        userName = searchName
+    }
+    const user = await fetch('https://api.github.com/users/' + userName);
+    const userData = await user.json();
+    console.log(userData)
+    if(userData.message != "Not Found") {
+        document.querySelector('#avatar').setAttribute('src', userData.avatar_url);
+        document.querySelector('#info').innerHTML = `<strong> Bio: </strong> ${userData.bio} <strong> Followers: </strong> ${userData.followers}`
+    } else {
+        document.querySelector('#info').innerHTML = `Profile not found for <strong>${userName}<strong>` 
+    }
+
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    getUserData();
+})
