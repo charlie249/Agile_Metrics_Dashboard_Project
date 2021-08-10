@@ -1,12 +1,14 @@
 async function getUserData() {
 
-    const user = await fetch('https://api.github.com/repos/serge-web/serge/issues');
-    const userData = await user.json();
-    //document.querySelector('#avatar').setAttribute('src', userData.avatar_url);
-    document.querySelector('#info').innerHTML = `<strong> Labels: </strong> ${userData} <strong> Proper: </strong> ${userData.followers}` //<strong> Following: </strong> ${userData.following} `
+    const repo = await fetch('https://api.github.com/repos/serge-web/serge');
+    const repoData = await repo.json();
+    //const pull = await fetch('https://github.com/serge-web/serge/pull/987');
+    //const pullData = await pulls.json();
+    //document.querySelector('#avatar').setAttribute('src', repoData.avatar_url);
+    document.querySelector('#info').innerHTML = `<strong> Labels: </strong> ${repoData} <strong> Proper: </strong> ${repoData.followers}` // <strong> Following: </strong> ${repoData.following} `
     
    // var gs = require('github-scraper');
-   // gs(user, function(err, data) {
+   // gs(repo, function(err, data) {
    //    document.querySelector('#info').innerHTML = `<strong> Labels: </strong> ${userData.data}`
    // })
 }
