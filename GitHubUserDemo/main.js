@@ -54,10 +54,10 @@ async function getUserData() {
     document.querySelector('#months').innerHTML = `<strong> Closed at: </strong> ${repoData.closed_at}`
     document.querySelector('#years').innerHTML = `<strong> Closed at: </strong> ${repoData.closed_at}`
 
-    Document.write("<br />Number of <b>days</b> since"+dString+": "+DateDiff.inDays(d1, d2));
-    Document.write("<br />Number of <b>weeks</b> since"+dString+": "+DateDiff.inWeeks(d1, d2));
-    Document.write("<br />Number of <b>months</b> since"+dString+": "+DateDiff.inMonths(d1, d2));
-    Document.write("<br />Number of <b>years</b> since"+dString+": "+DateDiff.inYears(d1, d2));
+    Document.write("<br />Number of <b>days</b> since"+dString+": "+DateDiff.inDays(d1, d2)).id = "days";
+    Document.write("<br />Number of <b>weeks</b> since"+dString+": "+DateDiff.inWeeks(d1, d2)).id="weeks";
+    Document.write("<br />Number of <b>months</b> since"+dString+": "+DateDiff.inMonths(d1, d2)).id = "months";
+    Document.write("<br />Number of <b>years</b> since"+dString+": "+DateDiff.inYears(d1, d2)).id="years";
     
     
     
