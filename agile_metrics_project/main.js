@@ -49,15 +49,15 @@ async function getUserData() {
     var d1 = new Date(dString);
     var d2 = new Date90;
 
-    document.querySelector('#days').innerHTML = `<br />Number of <b>days</b> since`+dString+`: `+DateDiff.inDays(d1, d2);
-    document.querySelector('#weeks').innerHTML = `<strong> Closed at: </strong> ${repoData.closed_at}`
-    document.querySelector('#months').innerHTML = `<strong> Closed at: </strong> ${repoData.closed_at}`
-    document.querySelector('#years').innerHTML = `<strong> Closed at: </strong> ${repoData.closed_at}`
+   // document.querySelector('#days').innerHTML = `<br />Number of <b>days</b> since`+dString+`: `+DateDiff.inDays(d1, d2);
+   // document.querySelector('#weeks').innerHTML = `<strong> Closed at: </strong> ${repoData.closed_at}`
+   // document.querySelector('#months').innerHTML = `<strong> Closed at: </strong> ${repoData.closed_at}`
+   // document.querySelector('#years').innerHTML = `<strong> Closed at: </strong> ${repoData.closed_at}`
 
-    Document.write("<br />Number of <b>days</b> since"+dString+": "+DateDiff.inDays(d1, d2)).id = "days";
-    Document.write("<br />Number of <b>weeks</b> since"+dString+": "+DateDiff.inWeeks(d1, d2)).id="weeks";
-    Document.write("<br />Number of <b>months</b> since"+dString+": "+DateDiff.inMonths(d1, d2)).id = "months";
-    Document.write("<br />Number of <b>years</b> since"+dString+": "+DateDiff.inYears(d1, d2)).id="years";
+     Document.write("<br />Number of <b>days</b> since"+dString+": "+DateDiff.inDays(d1, d2)).id = "days";
+     Document.write("<br />Number of <b>weeks</b> since"+dString+": "+DateDiff.inWeeks(d1, d2)).id="weeks";
+     Document.write("<br />Number of <b>months</b> since"+dString+": "+DateDiff.inMonths(d1, d2)).id = "months";
+     Document.write("<br />Number of <b>years</b> since"+dString+": "+DateDiff.inYears(d1, d2)).id="years";
     
     
     
