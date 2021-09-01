@@ -1,6 +1,6 @@
 async function getUserData() {
 
-    const repo = await fetch('https://api.github.com/repos/serge-web/serge/issues/994');
+    const repo = await fetch('https://api.github.com/repos/serge-web/serge/issues/988');
     const repoData = await repo.json();
     //TODO make comments_url and events_url display actual data not just the url
     //var rawComments = await fetch(repoData.comments_url);
@@ -19,8 +19,7 @@ async function getUserData() {
     const date2 = new Date(repoData.closed_at);
     const diffTime = Math.abs(date2 - date1);
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 *24));
-    document.querySelector('#days').innerHTML = `<strong> Length of time open: </strong> ${diffDays} days`   
-
+    document.querySelector('#days').innerHTML = `<strong> Length of time the issue is open: </strong> ${diffDays} days`   
 }
 
 window.addEventListener('DOMContentLoaded', () => {
